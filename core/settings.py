@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-PROJECT_DIR = path.dirname(path.abspath(__file__))
-STATIC_ROOT = path.join(PROJECT_DIR, 'static')
 
 
 # Application definition
@@ -118,8 +116,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+PROJECT_DIR = path.dirname(path.abspath(__file__))
+STATIC_ROOT = path.join(PROJECT_DIR, 'static')
+STATICFILES_DIRS=[path.join(BASE_DIR, 'static')]
