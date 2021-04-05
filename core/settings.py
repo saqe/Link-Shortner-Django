@@ -25,9 +25,7 @@ SECRET_KEY = getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
+ALLOWED_HOSTS = [getenv('HEROKU_DOMAIN_LINK')]
 
 # Application definition
 
